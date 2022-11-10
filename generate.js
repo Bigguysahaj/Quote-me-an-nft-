@@ -1,11 +1,12 @@
 import { Configuration, OpenAIApi } from "openai";
 import { writeFileSync } from "fs";
+require('dotenv').config();
 
-const config = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
+
+const configuration = new Configuration({ 
+    const apiKey= process.env.API_KEY;
 });
-
-const openai = new OpenAIApi(config);
+const openai = new OpenAIApi(configuration);
 const prompt = 'Two long roads diverging into a forest during the autumn season';
 // taken from "two roads diverged in a yellow woods" by Robert Frost
 
